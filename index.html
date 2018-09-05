@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://unpkg.com/ionicons@4.4.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <title>Banking</title>
+</head>
+<body>
+    <header>
+        <span class="menu"><i class="icon ion-md-menu"></i></span>
+        <span class="title">Accounts</span>
+        <span class="notification"><i class="icon ion-ios-notifications-outline"></i></span>
+    </header>
+
+    <main>
+        <ul class="card-list" id="all-cards">
+            <li class="card visa" id="visa">
+                <span class="account-type">Personal account</span>
+                <span class="amount">$5,903,99</span>
+                <span class="balance">Balance $32,930,55</span>
+            </li>
+
+            <li class="card mastercard">
+                <span class="account-type">Standard account</span>
+                <span class="amount">$5,903,99</span>
+                <span class="balance">Balance $32,930,55</span>
+            </li>
+
+            <li class="card verve">
+                <span class="account-type">Corporate account</span>
+                <span class="amount">$5,903,99</span>
+                <span class="balance">Balance $32,930,55</span>
+            </li>
+        </ul>
+
+        <section class="pull-up" id="pull-section">
+            <div class="card debit">
+                <span class="payoff">PAY OFF YOUR DEBIT</span>
+                <span class="payoff-amount">$3,191,20</span>
+            </div>
+            <p class="heading-text">QUICK TRANSFERS</p>
+            <ul class="contacts">
+                <li class="contact-card new"></li>
+                <li class="contact-card contact1"><p>Leon Graham</p></li>
+                <li class="contact-card contact1"><p>Leon Graham</p></li>
+                <li class="contact-card contact1"><p>Leon Graham</p></li>
+                <li class="contact-card contact1"><p>Leon Graham</p></li>
+                <li class="contact-card contact1"><p>Leon Graham</p></li>
+                <li class="contact-card contact1"><p>Leon Graham</p></li>
+            </ul>
+
+            <ul class="all-activity">
+                <li class="activity">
+                    <span class="icon"></span>
+                    <div class="activity-name">
+                        <span class="amount">-$500</span>
+                        <span class="description">Pizza from dominos</span>
+                    </div>
+                    <div class="timestamp">
+                        <span class="spend-icon"></span>
+                        <span class="date">01.05.2016</span>
+                    </div>
+                </li>
+
+                <li class="activity">
+                    <span class="icon"></span>
+                    <div class="activity-name">
+                        <span class="amount">-$500</span>
+                        <span class="description">Pizza from dominos</span>
+                    </div>
+                    <div class="timestamp">
+                        <span class="spend-icon"></span>
+                        <span class="date">01.05.2016</span>
+                    </div>
+                </li>
+
+                <li class="activity">
+                    <span class="icon"></span>
+                    <div class="activity-name">
+                        <span class="amount">-$500</span>
+                        <span class="description">Pizza from dominos</span>
+                    </div>
+                    <div class="timestamp">
+                        <span class="spend-icon"></span>
+                        <span class="date">01.05.2016</span>
+                    </div>
+                </li>
+
+                <li class="activity">
+                    <span class="icon"></span>
+                    <div class="activity-name">
+                        <span class="amount">-$500</span>
+                        <span class="description">Pizza from dominos</span>
+                    </div>
+                    <div class="timestamp">
+                        <span class="spend-icon"></span>
+                        <span class="date">01.05.2016</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        var visa = document.getElementById('visa');
+        visa.onclick = function(){
+            document.getElementById('all-cards').classList.toggle('pull')
+            document.getElementById('pull-section').classList.toggle('show')
+
+        }
+    </script>
+
+</body>
+</html>

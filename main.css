@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #111133;
+  color: #000;
+  padding: 1em;
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 0;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+header .menu {
+  margin-right: auto;
+  font-size: 2em;
+}
+
+header .title {
+  font-weight: 600;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+header .notification {
+  margin-left: auto;
+  font-size: 2em;
+}
+
+main {
+  background: #111133;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 7em;
+}
+
+ul.card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+ul.card-list li:not(:first-child) {
+  opacity: .9;
+}
+
+ul.card-list .card {
+  height: 100px;
+  padding: 2em;
+  margin-bottom: 1em;
+  background: #f90;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 15px 30px #00000024;
+          box-shadow: 0 15px 30px #00000024;
+}
+
+ul.card-list .card span {
+  display: block;
+}
+
+ul.card-list .card span.account-type {
+  color: #0c225d;
+  font-weight: 700;
+  font-size: .95em;
+  padding-bottom: 1.2em;
+  text-transform: uppercase;
+}
+
+ul.card-list .card span.amount {
+  color: #ffffff;
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+ul.card-list .card span.balance {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: .9em;
+  opacity: .7;
+}
+
+ul.card-list .card.visa {
+  z-index: 3;
+  background: linear-gradient(135deg, #1bc8ad 0%, #1260ca 100%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+ul.card-list .card.mastercard {
+  z-index: 2;
+  background: linear-gradient(135deg, #c83b9d 0%, #ca4d56 100%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+ul.card-list .card.verve {
+  z-index: 1;
+  background: linear-gradient(135deg, #7377cc 0%, #4344ad 100%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+ul.card-list.pull .visa {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+ul.card-list.pull .mastercard {
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+ul.card-list.pull .verve {
+  -webkit-transform: translate(0, -200%);
+          transform: translate(0, -200%);
+}
+
+section.pull-up {
+  opacity: 0;
+  -webkit-transform: translateY(112px);
+          transform: translateY(112px);
+  -webkit-transition: all 300ms ease-in-out .1s;
+  transition: all 300ms ease-in-out .1s;
+}
+
+section.pull-up.show {
+  opacity: 1;
+  -webkit-transform: translateY(-300px);
+          transform: translateY(-300px);
+}
+
+.card.debit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em 2em;
+  background: #132252;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.card.debit .payoff {
+  color: #347FCB;
+}
+
+.card.debit .payoff-amount {
+  margin-left: auto;
+}
+
+.heading-text {
+  color: #ffffff;
+  font-weight: 600;
+  font-weight: 1.2em;
+  margin: 1.5em 0;
+  opacity: .7;
+  letter-spacing: 2px;
+}
+
+ul.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  text-align: center;
+}
+
+ul.contacts li {
+  padding: 1em;
+  background: #cccccc;
+  margin-right: .3em;
+  border-radius: 5px;
+  background: #132252;
+}
+
+ul.contacts li:not(:first-child):before {
+  content: '';
+  width: 32px;
+  height: 32px;
+  background: #ff9900;
+  border: 2px solid #213162;
+  background: url("https://source.unsplash.com/random/50x51") no-repeat;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+ul.contacts li p {
+  color: #ffffff;
+  opacity: .5;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+ul.all-activity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2em;
+}
+
+ul.all-activity li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em 0;
+  border-bottom: 1px solid #ffffff0d;
+}
+
+ul.all-activity li .icon {
+  width: 36px;
+  height: 36px;
+  background: #4849a7;
+  border-radius: 50%;
+}
+
+ul.all-activity li .activity-name {
+  padding-left: 1em;
+}
+
+ul.all-activity li .activity-name .amount {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+ul.all-activity li .activity-name .description {
+  color: #ffffff;
+  opacity: .5;
+  font-size: .8em;
+  font-weight: 500;
+}
+
+ul.all-activity li .timestamp {
+  margin-left: auto;
+  justify-self: flex-end;
+}
+
+ul.all-activity li .timestamp .date {
+  color: #ffffff;
+  opacity: .5;
+  font-size: .8em;
+  font-weight: 500;
+}
+/*# sourceMappingURL=main.css.map */
