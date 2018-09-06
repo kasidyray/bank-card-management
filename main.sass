@@ -1,7 +1,7 @@
 body
     margin: 0
     font-family: 'Poppins', sans-serif;
-    background: #111133
+    background: #1a1f24
     color: #000
     padding: 1em
 
@@ -37,7 +37,6 @@ header
         font-size: 2em
 
 main 
-    background: #111133
     width: 100%
     height: 100%
     margin: 0 auto
@@ -124,13 +123,18 @@ section.pull-up
 .card.debit
     display: flex
     padding: 1em 2em;
-    background: #132252;
+    background: #00000030;
     border-radius: 5px;
     font-weight: 600;
     color: #fff;
 
     .payoff
         color: #347FCB
+
+        i
+            color: #ffffff
+            opacity: .5
+            padding-right: 1em
 
     .payoff-amount
         margin-left: auto
@@ -153,23 +157,38 @@ ul.contacts
         background: #cccccc
         margin-right: .3em
         border-radius: 5px
-        background: #132252;
+        background: #00000030;
+
+        &:first-child:before
+            content: "\f272"
+            font-family: "Ionicons";
+            color: #1583c0
+            font-size: 2em
 
         &:not(:first-child):before
             content: ''
             width: 32px
             height: 32px
             background: #ff9900
-            border: 2px solid #213162
-            background: url('https://source.unsplash.com/random/50x51') no-repeat
             border-radius: 50%
             display: inline-block
+
+        &:nth-child(odd):before:not(:first-child)
+            background: url('https://source.unsplash.com/random/50x50') no-repeat
+
+        &:nth-child(even):before
+            background: url('https://source.unsplash.com/random/50x51') no-repeat
+
+        // &:nth-child(3n + 1):before:not(:first-child)
+        //     background: url('https://source.unsplash.com/random/50x52') no-repeat
+
 
         p
             color: #ffffff
             opacity: .5
             text-align: center
             line-height: 1.2em
+            font-size: .9em
 
 ul.all-activity
     display: flex
@@ -184,7 +203,7 @@ ul.all-activity
         .icon
             width: 36px;
             height: 36px;
-            background: #4849a7
+            background: #1abcb0
             border-radius: 50%;
 
         .activity-name

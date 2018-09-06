@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #111133;
+  background: #1a1f24;
   color: #000;
   padding: 1em;
 }
@@ -47,7 +47,6 @@ header .notification {
 }
 
 main {
-  background: #111133;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -159,7 +158,7 @@ section.pull-up.show {
   display: -ms-flexbox;
   display: flex;
   padding: 1em 2em;
-  background: #132252;
+  background: #00000030;
   border-radius: 5px;
   font-weight: 600;
   color: #fff;
@@ -167,6 +166,12 @@ section.pull-up.show {
 
 .card.debit .payoff {
   color: #347FCB;
+}
+
+.card.debit .payoff i {
+  color: #ffffff;
+  opacity: .5;
+  padding-right: 1em;
 }
 
 .card.debit .payoff-amount {
@@ -195,7 +200,14 @@ ul.contacts li {
   background: #cccccc;
   margin-right: .3em;
   border-radius: 5px;
-  background: #132252;
+  background: #00000030;
+}
+
+ul.contacts li:first-child:before {
+  content: "\f272";
+  font-family: "Ionicons";
+  color: #1583c0;
+  font-size: 2em;
 }
 
 ul.contacts li:not(:first-child):before {
@@ -203,10 +215,16 @@ ul.contacts li:not(:first-child):before {
   width: 32px;
   height: 32px;
   background: #ff9900;
-  border: 2px solid #213162;
-  background: url("https://source.unsplash.com/random/50x51") no-repeat;
   border-radius: 50%;
   display: inline-block;
+}
+
+ul.contacts li:nth-child(odd):before:not(:first-child) {
+  background: url("https://source.unsplash.com/random/50x50") no-repeat;
+}
+
+ul.contacts li:nth-child(even):before {
+  background: url("https://source.unsplash.com/random/50x51") no-repeat;
 }
 
 ul.contacts li p {
@@ -214,6 +232,7 @@ ul.contacts li p {
   opacity: .5;
   text-align: center;
   line-height: 1.2em;
+  font-size: .9em;
 }
 
 ul.all-activity {
@@ -238,7 +257,7 @@ ul.all-activity li {
 ul.all-activity li .icon {
   width: 36px;
   height: 36px;
-  background: #4849a7;
+  background: #1abcb0;
   border-radius: 50%;
 }
 
