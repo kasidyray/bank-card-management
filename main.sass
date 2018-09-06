@@ -193,12 +193,12 @@ ul.contacts
 ul.all-activity
     display: flex
     flex-direction: column
-    margin-top: 2em
 
     li 
         display: flex
         padding: 1em 0;
         border-bottom: 1px solid #ffffff0d;
+        align-items: flex-end;
 
         .icon
             width: 36px;
@@ -223,6 +223,16 @@ ul.all-activity
         .timestamp
             margin-left: auto
             justify-self: flex-end
+
+            .spend-icon:before
+                content: "\f27e";
+                font-size: 1em;
+                font-family: "Ionicons";
+                color: #d00000;
+                display: block;
+                padding-bottom: 1em
+                text-align: right
+                transform: rotate(45deg);
 
             .date
                 color: #ffffff

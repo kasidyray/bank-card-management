@@ -243,7 +243,6 @@ ul.all-activity {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 2em;
 }
 
 ul.all-activity li {
@@ -252,6 +251,9 @@ ul.all-activity li {
   display: flex;
   padding: 1em 0;
   border-bottom: 1px solid #ffffff0d;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 ul.all-activity li .icon {
@@ -281,6 +283,18 @@ ul.all-activity li .activity-name .description {
 ul.all-activity li .timestamp {
   margin-left: auto;
   justify-self: flex-end;
+}
+
+ul.all-activity li .timestamp .spend-icon:before {
+  content: "\f27e";
+  font-size: 1em;
+  font-family: "Ionicons";
+  color: #d00000;
+  display: block;
+  padding-bottom: 1em;
+  text-align: right;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 ul.all-activity li .timestamp .date {
