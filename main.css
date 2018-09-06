@@ -201,6 +201,13 @@ ul.contacts li {
   margin-right: .3em;
   border-radius: 5px;
   background: #00000030;
+  -webkit-box-shadow: 0 5px 25px #0000000d;
+          box-shadow: 0 5px 25px #0000000d;
+}
+
+ul.contacts li:first-child {
+  background: transparent;
+  border: 1px solid #1583c0;
 }
 
 ul.contacts li:first-child:before {
