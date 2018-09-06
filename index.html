@@ -18,19 +18,19 @@
 
     <main>
         <ul class="card-list" id="all-cards">
-            <li class="card visa" id="visa">
+            <li class="card btn visa" id="visa">
                 <span class="account-type">Personal account</span>
                 <span class="amount">$5,903,99</span>
                 <span class="balance">Balance $32,930,55</span>
             </li>
 
-            <li class="card mastercard">
+            <li class="card btn mastercard">
                 <span class="account-type">Standard account</span>
                 <span class="amount">$5,903,99</span>
                 <span class="balance">Balance $32,930,55</span>
             </li>
 
-            <li class="card verve">
+            <li class="card btn verve">
                 <span class="account-type">Corporate account</span>
                 <span class="amount">$5,903,99</span>
                 <span class="balance">Balance $32,930,55</span>
@@ -107,11 +107,32 @@
 
     <script>
         var visa = document.getElementById('visa');
-        visa.onclick = function(){
-            document.getElementById('all-cards').classList.toggle('pull')
-            document.getElementById('pull-section').classList.toggle('show')
+        var pulled = document.getElementById('pull-section');
+        var buttons = document.getElementsByClassName('btn')
 
+        for(var btn of buttons){
+            btn.onclick = function(){
+            this.classList.toggle('clicked');
+            document.getElementById('all-cards').classList.toggle('pull')
+            pulled.classList.toggle('show')
+
+            if(pulled.classList.contains('show') === false){
+
+                pulled.classList.add('hide');
+            
+                setTimeout(function(){
+                    pulled.classList.toggle('disappear')
+                },300);
+                
+            } else
+                pulled.classList.remove('hide', 'disappear');
         }
+        }
+
+        
+
+        
+
     </script>
 
 </body>
